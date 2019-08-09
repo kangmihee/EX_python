@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form name="frm" action="/myapp/insertok/" method="post">{%csrf_token%}
+		<h3>* 소비자 인식조사  *</h3>
+		1. 귀하의 직업은?<br>
+		1)화이트칼라<input type="radio" name='job' value="화이트칼라" checked="checked">
+		2)블루칼라<input type="radio" name='job' value="블루칼라">
+		3)학생<input type="radio" name='job' value="학생"> 
+		4)기타<input type="radio" name='job' value="기타"><br><br>  
+		
+		2. 귀하의 성별은?<br>
+		1)남자<input type="radio" name='gender' value="남자" checked="checked"> 
+		2)여자<input type="radio" name='gender' value="여자"><br><br> 
+		 
+		3. 스타벅스 커피에 대한 만족도는?<br>
+		1)매우불만족<input type="radio" name='survey' value="매우불만족" checked="checked"> 
+		2)불만족<input type="radio" name='survey' value="불만족"> 
+		3)보통<input type="radio" name='survey' value="보통">
+		4)만족<input type="radio" name='survey' value="만족">		 
+		5)매우만족<input type="radio" name='survey' value="매우만족"><br><br>  
+		
+		<input type="submit" value="설문완료">
+		<input type="reset" value="초기화">
+		
+	</form>
+</body>
+</html>

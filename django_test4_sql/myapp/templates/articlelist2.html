@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+
+<body>
+<h3>** 친구 보기 **</h3>
+{% if art.count > 0 %}
+	<table border="1">
+		<tr>
+			<th>id</th>
+			<th>이름</th>
+			<th>전화</th>
+		</tr>
+		{% for a in art %}	
+			<tr>
+				<td>{{a.id}}</td>
+				<td>{{a.name}}</td>
+				<td>{{a.tel}}</td>		
+			</tr>	
+		{% endfor %}
+	</table>	
+{% else %}
+	자료가 없어요.
+{% endif %}
+
+</body>
+</html>

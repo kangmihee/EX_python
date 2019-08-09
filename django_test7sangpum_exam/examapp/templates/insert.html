@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+window.onload = function(){
+	document.getElementById("btnOk").onclick = func;
+}
+
+function func(){
+	if(frm.id.value == "" || frm.irum.value == "" || frm.kor.value == "" || frm.eng.value == "" )
+		{
+			alert("입력자료를 모두 채우시요");
+			return;
+		}
+	frm.submit();
+}
+</script>
+</head>
+<body>
+<h2>* 성적 입력 *</h2>
+<form name = "frm" action = "/list/insertok" method = "post">{% csrf_token %}
+<table border = "1">
+	<tr>
+		<td>이름</td>
+		<td><input type = "text" name = "irum"/></td>
+	</tr>
+	<tr>
+		<td>국어</td>
+		<td><input type = "text" name = "kor"/></td>
+	</tr>
+	<tr>
+		<td>영어</td>
+		<td><input type = "text" name = "eng"/></td>
+	</tr>
+	<tr>
+		<td colspan = "2" style = "text-align : center">
+			<input type = "button" value = "추가하기" id = "btnOk">
+		</td>
+	</tr>
+</table>
+</form>
+</body>
+</html>

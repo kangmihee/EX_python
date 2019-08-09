@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>* 성적표 *</h2>
+<div style = "width : 70%; text-align : right">
+	<a href = "/list/insert">성적 추가</a>
+</div>
+<br>
+<table border = "1" style = "width : 80%">
+	<tr>
+		<th>id</th><th>이름</th><th>국어</th><th>영어</th><th>총점</th><th>평균</th>
+	</tr>
+	{% if score %}
+	{%for s in score %}
+	<tr>
+		<td>{{s.id}}</td>
+		<td>{{s.irum}}</td>
+		<td>{{s.kor}}</td>
+		<td>{{s.eng}}</td>
+		<td>{{s.kor}} + {{s.eng}}</td>
+		<td>{{s.kor}} + {{s.eng}}/2</td>
+	</tr>
+	{%endfor%}
+	{% endif%}
+	<tr>
+		<td colspan = "6">인원수 : {{count}}</td>
+	</tr>
+</table>
+</body>
+</html>

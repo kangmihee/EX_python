@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form name="frm" action="/myapp/insertok/" method="post">{%csrf_token%}
+		<h3>* 커피전문점에 대한 소비자 인식조사 *</h3>
+		귀하의 성별은? 
+		남<input type="radio" name='gender' value="남" checked="checked">
+		여<input type="radio" name='gender' value="여"><br> 
+		
+		귀하의 나이는? 
+		10대<input type="radio" name='age' value="10" checked="checked"> 
+		20대<input type="radio" name='age' value="20"> 
+		30대<input type="radio" name='age' value="30"> 
+		40대<input type="radio" name='age' value="40">
+		50이상<input type="radio" name='age' value="50">
+		<br>
+		 
+		선호하는 커피전문점은? 
+		스타벅스<input type="radio" name='co_survey' value="스타벅스" checked="checked"> 
+		커피빈<input type="radio" name='co_survey' value="커피빈"> 
+		이디아<input type="radio" name='co_survey' value="이디아"> 
+		탐앤탐스<input type="radio" name='co_survey' value="탐앤탐스"><br> 
+		
+		<input type="submit" value="설문완료">
+		<input type="reset" value="초기화">
+		
+	</form>
+</body>
+</html>
